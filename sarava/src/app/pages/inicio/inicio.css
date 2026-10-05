@@ -429,18 +429,24 @@
 
 
 .qrcode-quadrado {
-  width: 90px;
-  height: 90px;
+  width: 140px;
+  height: 140px;
 
   margin: 0 auto 10px;
 
-  padding: 6px;
+  padding: 10px;
 
   background: #ffffff;
 
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
+.qrcode-quadrado img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
 
 .qr-padrao {
   width: 100%;
