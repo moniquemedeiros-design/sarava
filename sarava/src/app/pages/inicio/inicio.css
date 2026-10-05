@@ -429,16 +429,16 @@
 
 
 .qrcode-quadrado {
-  width: 140px;
-  height: 140px;
+  width: 90px;
+  height: 90px;
 
   margin: 0 auto 10px;
 
-  padding: 10px;
+  padding: 6px;
 
   background: #ffffff;
 
-  border-radius: 10px;
+  border-radius: 8px;
 }
 
 
