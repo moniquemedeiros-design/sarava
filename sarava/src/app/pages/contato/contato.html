@@ -1,0 +1,181 @@
+<section class="contato">
+
+  <!-- CABEÇALHO -->
+  <header class="contato-cabecalho">
+
+    <span class="contato-etiqueta">
+      FALE COM A SARAVÁ
+    </span>
+
+    <h1>
+      Entre em contato
+    </h1>
+
+    <p>
+      Estamos aqui para ouvir você.
+    </p>
+
+  </header>
+
+
+  <!-- CONTEÚDO -->
+  <section class="contato-conteudo">
+
+
+    <!-- INFORMAÇÕES -->
+    <div class="contato-info">
+
+      <h2>
+        Vamos conversar? 💛
+      </h2>
+
+      <p>
+        Tem alguma dúvida, sugestão ou quer saber mais sobre nossos produtos?
+      </p>
+
+      <p>
+        Entre em contato com a Saravá.
+        Será um prazer conversar com você!
+      </p>
+
+
+      <!-- INSTAGRAM -->
+      <a
+        class="contato-item"
+        href="https://www.instagram.com/"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        <span class="contato-icone">
+          📷
+        </span>
+
+        <span>
+          <strong>Instagram</strong>
+          <small>@sarava.raizes</small>
+        </span>
+
+      </a>
+
+    </div>
+
+
+    <!-- FORMULÁRIO -->
+    <div class="contato-formulario">
+
+      <h2>
+        Envie uma mensagem
+      </h2>
+
+
+      <form
+        #formulario="ngForm"
+        (ngSubmit)="enviarMensagem(formulario)">
+
+        <!-- NOME -->
+        <div class="campo">
+
+          <label for="nome">
+            Nome
+          </label>
+
+          <input
+            id="nome"
+            type="text"
+            name="nome"
+            placeholder="Digite seu nome"
+            [(ngModel)]="nome"
+            required>
+
+        </div>
+
+
+        <!-- E-MAIL -->
+        <div class="campo">
+
+          <label for="email">
+            E-mail
+          </label>
+
+          <input
+            id="email"
+            type="email"
+            name="email"
+            placeholder="Digite seu e-mail"
+            [(ngModel)]="email"
+            required>
+
+        </div>
+
+
+        <!-- MENSAGEM -->
+        <div class="campo">
+
+          <label for="mensagem">
+            Mensagem
+          </label>
+
+          <textarea
+            id="mensagem"
+            name="mensagem"
+            rows="5"
+            placeholder="Escreva sua mensagem..."
+            [(ngModel)]="mensagem"
+            required>
+          </textarea>
+
+        </div>
+
+
+        <!-- BOTÃO -->
+        <button
+          type="submit"
+          [disabled]="formulario.invalid">
+
+          Enviar mensagem
+          <span>✦</span>
+
+        </button>
+
+      </form>
+
+
+      <!-- NOTIFICAÇÃO FOFA -->
+      <div
+        class="mensagem-enviada"
+        *ngIf="mensagemEnviada">
+
+        <div class="mensagem-enviada-icone">
+          💛
+        </div>
+
+        <div>
+
+          <strong>
+            Mensagem enviada! ✨
+          </strong>
+
+          <p>
+            Obrigada por falar com a Saravá.
+            Recebemos sua mensagem com muito carinho!
+          </p>
+
+        </div>
+
+        <button
+          type="button"
+          class="fechar-mensagem"
+          (click)="fecharMensagem()"
+          aria-label="Fechar mensagem">
+
+          ×
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</section>

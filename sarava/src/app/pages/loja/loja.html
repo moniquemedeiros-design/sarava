@@ -1,0 +1,93 @@
+<section class="loja">
+
+  <header class="loja-cabecalho">
+    <span class="loja-etiqueta">FEITO COM AMOR E PROPÓSITO</span>
+    <h1>Um pedacinho da Saravá 💛</h1>
+    <p>
+      Descubra nossas criações artesanais, feitas com criatividade,
+      carinho e um olhar especial para a sustentabilidade.
+    </p>
+  </header>
+
+  <div class="titulo-vitrine">
+    <div>
+      <span>NOSSAS CRIAÇÕES</span>
+      <h2>Escolha suas favoritas</h2>
+    </div>
+    <span class="vitrine-detalhe">Feito à mão, feito com história.</span>
+  </div>
+
+  <section class="vitrine" aria-label="Produtos da Saravá">
+
+    <article class="produto" *ngFor="let produto of produtos">
+
+      <div class="produto-imagem">
+        <img
+          [src]="produto.imagem"
+          [alt]="produto.nome"
+          loading="lazy">
+        <span class="selo-produto">{{ produto.categoria }}</span>
+      </div>
+
+      <div class="produto-info">
+        <h3>{{ produto.nome }}</h3>
+        <p class="produto-descricao">{{ produto.descricao }}</p>
+
+        <div class="produto-rodape">
+          <span class="produto-preco">
+            {{ produto.preco ? (produto.preco | currency:'BRL':'symbol':'1.2-2') : 'Preço em breve' }}
+          </span>
+
+          <button
+            class="botao-adicionar"
+            type="button"
+            (click)="adicionarAoCarrinho(produto)">
+            <span aria-hidden="true">＋</span>
+            Adicionar ao carrinho
+          </button>
+        </div>
+      </div>
+
+    </article>
+
+  </section>
+
+  <aside class="mensagem-sustentavel">
+    <span class="mensagem-icone" aria-hidden="true">✿</span>
+    <div>
+      <h2>Mais que acessórios, novas histórias.</h2>
+      <p>
+        Cada peça representa criatividade, reaproveitamento
+        e carinho em cada detalhe. Obrigada por apoiar a Saravá!
+      </p>
+    </div>
+  </aside>
+
+  <!-- AVISO DE PRODUTO ADICIONADO -->
+  <div
+    class="aviso-carrinho"
+    [class.visivel]="mensagem"
+    [attr.aria-hidden]="!mensagem"
+    aria-live="polite"
+    aria-atomic="true">
+
+    <span class="aviso-coracao" aria-hidden="true">💛</span>
+
+    <div class="aviso-texto">
+      <strong>Oba! Que escolha linda!</strong>
+      <p>{{ mensagem }}</p>
+      <span>Seu carinho pela Saravá está no carrinho ✨</span>
+    </div>
+
+    <button
+      type="button"
+      class="fechar-aviso"
+      aria-label="Fechar mensagem"
+      (click)="fecharMensagem()">
+      ×
+    </button>
+
+  </div>
+
+</section>
+

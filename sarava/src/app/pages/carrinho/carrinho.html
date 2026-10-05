@@ -1,0 +1,196 @@
+<section class="carrinho">
+
+  <!-- CABEÇALHO -->
+  <header class="carrinho-cabecalho">
+
+    <span class="carrinho-etiqueta">
+      SUA SELEÇÃO SARAVÁ
+    </span>
+
+    <h1>
+      Meu carrinho
+    </h1>
+
+    <p>
+      Confira as peças que você escolheu.
+    </p>
+
+  </header>
+
+
+  <!-- PRODUTOS -->
+  <section class="lista-carrinho">
+
+    <article
+      class="item-carrinho"
+      *ngFor="let item of itens">
+
+      <!-- IMAGEM -->
+      <div class="item-imagem">
+
+        <img
+          [src]="item.imagem"
+          [alt]="item.nome">
+
+      </div>
+
+
+      <!-- INFORMAÇÕES -->
+      <div class="item-info">
+
+        <span class="item-categoria">
+          {{ item.categoria }}
+        </span>
+
+        <h2>
+          {{ item.nome }}
+        </h2>
+
+        <span class="item-preco">
+
+          {{
+            item.preco
+              ? (item.preco | currency:'BRL':'symbol':'1.2-2')
+              : 'Preço em breve'
+          }}
+
+        </span>
+
+
+        <!-- QUANTIDADE -->
+        <div class="quantidade">
+
+          <button
+            type="button"
+            aria-label="Diminuir quantidade"
+            (click)="diminuirQuantidade(item.id)">
+            −
+          </button>
+
+          <span>
+            {{ item.quantidade }}
+          </span>
+
+          <button
+            type="button"
+            aria-label="Aumentar quantidade"
+            (click)="aumentarQuantidade(item.id)">
+            +
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- REMOVER -->
+      <button
+        type="button"
+        class="remover"
+        aria-label="Remover produto"
+        (click)="removerItem(item.id)">
+
+        ×
+
+      </button>
+
+    </article>
+
+
+    <!-- CARRINHO VAZIO -->
+    <section
+      class="carrinho-vazio"
+      *ngIf="itens.length === 0">
+
+      <div class="vazio-icone">
+        ♡
+      </div>
+
+      <h2>
+        Seu carrinho está esperando por você
+      </h2>
+
+      <p>
+        Que tal conhecer nossas peças e escolher
+        uma criação para levar com você?
+      </p>
+
+      <a
+        routerLink="/loja"
+        class="botao-loja">
+
+        Conhecer a loja
+
+        <span>
+          →
+        </span>
+
+      </a>
+
+    </section>
+
+  </section>
+
+
+  <!-- MENSAGEM -->
+  <section class="mensagem-carrinho">
+
+    <div class="mensagem-icone">
+      ✿
+    </div>
+
+    <div>
+
+      <h2>
+        Cada escolha ajuda uma história a continuar.
+      </h2>
+
+      <p>
+        Obrigada por escolher a Saravá e apoiar
+        criações feitas com criatividade e propósito.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- AVISO SOBRE A COMPRA PRESENCIAL -->
+  <section
+    class="aviso-presencial"
+    *ngIf="itens.length > 0">
+
+    <span class="aviso-presencial-icone">
+      💛
+    </span>
+
+    <div>
+
+      <h2>
+        Gostou de alguma peça?
+      </h2>
+
+      <p>
+        A compra é realizada presencialmente na escola.
+        Mostre suas peças escolhidas e fale com a equipe da Saravá.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- VOLTAR PARA A LOJA -->
+  <div class="voltar-loja">
+
+    <a
+      routerLink="/loja"
+      class="continuar-comprando">
+
+      ← Continuar conhecendo a loja
+
+    </a>
+
+  </div>
+
+</section>

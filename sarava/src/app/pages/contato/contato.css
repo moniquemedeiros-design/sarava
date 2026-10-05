@@ -1,0 +1,660 @@
+:host {
+  display: block;
+}
+
+/* ========================================
+   PÁGINA DE CONTATO
+======================================== */
+
+.contato {
+  --marrom: #60391f;
+  --marrom-escuro: #422716;
+  --laranja: #a95625;
+  --dourado: #f2c66e;
+  --creme: #fff9ef;
+  --texto: #654832;
+
+  min-height: 70vh;
+
+  padding: 45px 5.5% 70px;
+
+  color: var(--texto);
+
+  background:
+    radial-gradient(
+      circle at 8% 10%,
+      #ffe4a966,
+      transparent 30%
+    ),
+    linear-gradient(
+      180deg,
+      #fffaf0,
+      #f3dfbd
+    );
+}
+
+
+/* ========================================
+   CABEÇALHO
+======================================== */
+
+.contato-cabecalho {
+  max-width: 800px;
+
+  margin: 0 auto 45px;
+
+  text-align: center;
+}
+
+.contato-etiqueta {
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  color: #a45b29;
+
+  font-size: 0.76rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.15em;
+}
+
+.contato-cabecalho h1 {
+  margin: 5px 0 12px;
+
+  color: #60391f;
+
+  font-family:
+    Georgia,
+    'Times New Roman',
+    serif;
+
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+
+  line-height: 1.15;
+}
+
+.contato-cabecalho p {
+  margin: 0;
+
+  color: #795c43;
+
+  font-size: 1.05rem;
+
+  line-height: 1.7;
+}
+
+
+/* ========================================
+   ÁREA PRINCIPAL
+======================================== */
+
+.contato-conteudo {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1fr)
+    minmax(0, 1fr);
+
+  gap: 35px;
+
+  max-width: 1150px;
+
+  margin: 0 auto;
+}
+
+
+/* ========================================
+   INFORMAÇÕES
+======================================== */
+
+.contato-info {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  min-height: 500px;
+
+  padding: 45px;
+
+  border-radius: 25px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #63391f,
+      #a95122 58%,
+      #ce8736
+    );
+
+  color: white;
+
+  box-shadow:
+    0 12px 30px #60391f25;
+}
+
+.contato-info h2 {
+  margin: 0 0 18px;
+
+  color: #fff8e8;
+
+  font-family:
+    Georgia,
+    'Times New Roman',
+    serif;
+
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+
+  line-height: 1.2;
+}
+
+.contato-info > p {
+  max-width: 500px;
+
+  margin: 0 0 18px;
+
+  color: #fff0d8;
+
+  font-size: 0.98rem;
+
+  line-height: 1.75;
+}
+
+
+/* ========================================
+   INSTAGRAM
+======================================== */
+
+.contato-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  width: 100%;
+
+  max-width: 470px;
+
+  box-sizing: border-box;
+
+  margin-top: 12px;
+
+  padding: 17px 20px;
+
+  border: 1px solid #ffffff25;
+
+  border-radius: 16px;
+
+  background: #ffffff18;
+
+  color: white;
+
+  text-decoration: none;
+
+  backdrop-filter: blur(5px);
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.contato-item:hover {
+  transform: translateY(-3px);
+
+  background: #ffffff28;
+}
+
+.contato-icone {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex: 0 0 45px;
+
+  width: 45px;
+  height: 45px;
+
+  border-radius: 13px;
+
+  background: #ffffff25;
+
+  font-size: 1.35rem;
+}
+
+.contato-item strong {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #fff8e8;
+
+  font-size: 1rem;
+}
+
+.contato-item small {
+  display: block;
+
+  color: #ffe8bd;
+
+  font-size: 0.85rem;
+}
+
+
+/* ========================================
+   FORMULÁRIO
+======================================== */
+
+.contato-formulario {
+  position: relative;
+
+  padding: 40px;
+
+  border: 1px solid #ead7b9;
+
+  border-radius: 25px;
+
+  background: #fffdf8;
+
+  box-shadow:
+    0 12px 30px #60391f16;
+}
+
+.contato-formulario h2 {
+  margin: 0 0 28px;
+
+  color: #60391f;
+
+  font-family:
+    Georgia,
+    'Times New Roman',
+    serif;
+
+  font-size: 1.8rem;
+}
+
+
+/* ========================================
+   CAMPOS
+======================================== */
+
+.campo {
+  display: flex;
+
+  flex-direction: column;
+
+  margin-bottom: 19px;
+}
+
+.campo label {
+  margin-bottom: 7px;
+
+  color: #654832;
+
+  font-size: 0.83rem;
+
+  font-weight: 700;
+}
+
+.campo input,
+.campo textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 13px 15px;
+
+  border: 1px solid #d9c5a5;
+
+  border-radius: 12px;
+
+  outline: none;
+
+  background: #fffaf1;
+
+  color: #60391f;
+
+  font-family: inherit;
+
+  font-size: 0.9rem;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.campo input {
+  min-height: 46px;
+}
+
+.campo textarea {
+  min-height: 125px;
+
+  resize: vertical;
+
+  line-height: 1.5;
+}
+
+.campo input::placeholder,
+.campo textarea::placeholder {
+  color: #a9957e;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+  border-color: #b86d31;
+
+  background: white;
+
+  box-shadow:
+    0 0 0 3px #f2c66e45;
+}
+
+
+/* ========================================
+   BOTÃO ENVIAR
+======================================== */
+
+.contato-formulario form button[type='submit'] {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 9px;
+
+  width: 100%;
+
+  min-height: 48px;
+
+  margin-top: 5px;
+
+  padding: 12px 18px;
+
+  border: none;
+
+  border-radius: 30px;
+
+  background:
+    linear-gradient(
+      110deg,
+      #b9682c,
+      #75401f
+    );
+
+  color: white;
+
+  font-size: 0.9rem;
+
+  font-weight: 800;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 7px 16px #60391f20;
+
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.contato-formulario form button[type='submit'] span {
+  font-size: 1rem;
+}
+
+.contato-formulario form button[type='submit']:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  filter: brightness(1.08);
+}
+
+.contato-formulario form button[type='submit']:disabled {
+  opacity: 0.55;
+
+  cursor: not-allowed;
+
+  box-shadow: none;
+}
+
+
+/* ========================================
+   MENSAGEM ENVIADA
+======================================== */
+
+.mensagem-enviada {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 14px;
+
+  margin-top: 20px;
+
+  padding: 17px 18px;
+
+  border: 1px solid #e5c995;
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff9e9,
+      #fff3d5
+    );
+
+  color: #60391f;
+
+  box-shadow:
+    0 8px 22px #60391f18;
+
+  animation:
+    aparecerMensagem 0.35s ease;
+}
+
+.mensagem-enviada-icone {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex: 0 0 42px;
+
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  background: #f5d993;
+
+  font-size: 1.3rem;
+}
+
+.mensagem-enviada strong {
+  display: block;
+
+  margin-bottom: 5px;
+
+  color: #60391f;
+
+  font-family:
+    Georgia,
+    'Times New Roman',
+    serif;
+
+  font-size: 1rem;
+}
+
+.mensagem-enviada p {
+  margin: 0;
+
+  color: #805b3b;
+
+  font-size: 0.85rem;
+
+  line-height: 1.5;
+}
+
+.fechar-mensagem {
+  margin-left: auto;
+
+  padding: 0 3px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #805536;
+
+  font-size: 1.4rem;
+
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.fechar-mensagem:hover {
+  color: #60391f;
+}
+
+
+/* ========================================
+   ANIMAÇÃO
+======================================== */
+
+@keyframes aparecerMensagem {
+
+  from {
+    opacity: 0;
+
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+
+}
+
+
+/* ========================================
+   ACESSIBILIDADE / FOCO
+======================================== */
+
+.contato-item:focus-visible,
+.contato-formulario input:focus-visible,
+.contato-formulario textarea:focus-visible,
+.contato-formulario button:focus-visible,
+.fechar-mensagem:focus-visible {
+  outline: 3px solid #e9ad52;
+
+  outline-offset: 3px;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 850px) {
+
+  .contato-conteudo {
+    grid-template-columns: 1fr;
+
+    max-width: 650px;
+  }
+
+  .contato-info {
+    min-height: auto;
+
+    padding: 35px;
+  }
+
+}
+
+
+/* ========================================
+   CELULAR
+======================================== */
+
+@media (max-width: 600px) {
+
+  .contato {
+    padding: 32px 5% 45px;
+  }
+
+  .contato-cabecalho {
+    margin-bottom: 32px;
+  }
+
+  .contato-cabecalho h1 {
+    font-size: 2.25rem;
+  }
+
+  .contato-cabecalho p {
+    font-size: 0.94rem;
+  }
+
+  .contato-info {
+    padding: 28px 22px;
+
+    border-radius: 20px;
+  }
+
+  .contato-info h2 {
+    font-size: 1.8rem;
+  }
+
+  .contato-info > p {
+    font-size: 0.9rem;
+  }
+
+  .contato-formulario {
+    padding: 25px 20px;
+
+    border-radius: 20px;
+  }
+
+  .contato-formulario h2 {
+    font-size: 1.55rem;
+
+    margin-bottom: 23px;
+  }
+
+  .mensagem-enviada {
+    padding: 15px;
+  }
+
+  .mensagem-enviada p {
+    font-size: 0.82rem;
+  }
+
+}
+
+
+/* ========================================
+   REDUÇÃO DE MOVIMENTO
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .contato-item,
+  .contato-formulario form button,
+  .mensagem-enviada {
+    animation: none;
+
+    transition: none;
+  }
+
+}

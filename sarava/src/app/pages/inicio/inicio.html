@@ -1,0 +1,219 @@
+<!-- =====================================
+     PÁGINA INÍCIO
+===================================== -->
+
+<section class="inicio">
+
+
+  <!-- =====================================
+       CARROSSEL
+  ====================================== -->
+
+  <section class="carrossel">
+
+
+    <!-- IMAGEM 1 -->
+
+    <div
+      class="slide"
+      [class.ativo]="indiceAtual === 0"
+    >
+
+      <img
+        src="/imagens/Carrossel-1.png"
+        alt="Conheça a Saravá"
+      >
+
+    </div>
+
+
+    <!-- IMAGEM 2 -->
+
+    <div
+      class="slide"
+      [class.ativo]="indiceAtual === 1"
+    >
+
+      <img
+        src="/imagens/Carrossel-2.png"
+        alt="Conheça a história da Saravá"
+      >
+
+    </div>
+
+
+    <!-- BOTÃO ANTERIOR -->
+
+    <button
+      class="botao-carrossel voltar"
+      type="button"
+      aria-label="Imagem anterior"
+      (click)="anterior()"
+    >
+
+      ❮
+
+    </button>
+
+
+    <!-- BOTÃO PRÓXIMO -->
+
+    <button
+      class="botao-carrossel avancar"
+      type="button"
+      aria-label="Próxima imagem"
+      (click)="proximo()"
+    >
+
+      ❯
+
+    </button>
+
+
+    <!-- INDICADORES -->
+
+    <div class="indicadores">
+
+      <button
+        class="indicador"
+        [class.ativo]="indiceAtual === 0"
+        type="button"
+        aria-label="Imagem 1"
+        (click)="irPara(0)"
+      ></button>
+
+
+      <button
+        class="indicador"
+        [class.ativo]="indiceAtual === 1"
+        type="button"
+        aria-label="Imagem 2"
+        (click)="irPara(1)"
+      ></button>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================
+       FRASE ABAIXO DO CARROSSEL
+  ====================================== -->
+
+  <p class="frase-carrossel">
+    Cada peça carrega criatividade, cuidado e uma nova história.
+  </p>
+
+
+  <!-- =====================================
+       CHAMADA PARA A LOJA
+  ====================================== -->
+
+  <section class="chamada-loja">
+
+    <div class="chamada-texto">
+
+
+      <span>
+        DESCUBRA A SARAVÁ
+      </span>
+
+
+      <h1>
+        Acessórios únicos, histórias especiais.
+      </h1>
+
+
+      <p>
+        Explore nossa loja e descubra peças criadas
+        com criatividade, propósito e carinho.
+      </p>
+
+
+      <a
+        routerLink="/loja"
+        class="botao-loja"
+      >
+
+        Conhecer a loja
+
+        <span>
+          →
+        </span>
+
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <!-- =====================================
+       QR CODE
+  ====================================== -->
+
+  <section class="qrcode">
+
+    <div class="qrcode-caixa">
+
+
+      <!-- TEXTO -->
+
+      <div class="qrcode-texto">
+
+        <span>
+          LEVE A SARAVÁ COM VOCÊ
+        </span>
+
+
+        <h2>
+          Nossa loja na palma da sua mão.
+        </h2>
+
+
+        <p>
+          Aponte a câmera do celular para o QR Code
+          e acesse a Saravá de maneira rápida e fácil.
+        </p>
+
+      </div>
+
+
+      <!-- QR CODE -->
+
+      <div class="qrcode-placeholder">
+
+        <div class="qrcode-quadrado">
+
+          <div class="qr-padrao">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+          </div>
+
+        </div>
+
+
+        <p>
+          Escaneie para acessar
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+</section>
